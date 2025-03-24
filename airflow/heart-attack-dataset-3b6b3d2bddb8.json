@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "heart-attack-dataset",
+  "private_key_id": "3b6b3d2bddb884dfa35ee35ddd3df97fe2897a77",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCQjth3zXkaeQNF\n0GEWveKzr8gqClqsOJYBv0BPtLcU0jW2tS+81ZakQIXI7lUfrLCBAjqHzISQfg9h\n3x983PmBhxIPHFOxgwDF4OHhjDvXiSlma0Gxp3vK13O/D4lsWPAgxo9GRpOkDsNc\niRkK/veC9aR6BdyYVHcnSxLrv1pcoKxDbzj2FIodJKbRE/EbP3IkL39xs7ZxQiZh\nFrtJmAuhGAdtBJXGdHDfruTTwRrSKvpDb4H2Igxusb4m/YlpuoJlU2vO69WdwNKC\n2UtatGL8cac7xtgkZ0oj7fCyJSyHjjgHFL6do7LJg2qTWy37vFJt0s42MSC0ppQZ\nGTaIjqi5AgMBAAECggEACB/fJAHqV9s2nIqKSmBAXjT3nP/upKtG0wZQCQAbzLxx\nGbmz2yXDTQFLWPBRhxw04gChZYHQbtvcOstIK8OySjNbMno3F0zzktYsG88T4JiW\n474MzSf1RICOGCOOvQYqniJKvyUMUIt73gwz2h2xBNfld0OJEw6m5mXJGcgsE0nm\n04Nhie6WGdtEdwqz+pGkbCZ6CIf1MzwAsOvFi++4Fy+9bNSRP0ppF6NcRJ7oAOQy\npN4HRSIjpp5hdpu22cLOvx5K/itKIvjsc24anAFqJc1Eyc0V57DFEvGdb4jpH6XT\ngB6nwgC4EgkC/8mA+iT60FgmaU7Mn3bQi2L0OMwcWQKBgQDKHKllDezjvp9KtQXD\nBFMO8+ACztlfgcgTP3cBRm+7io/4tunbDJ0+ePqemhTHMbCqtRnCTNbaBpYjFUvJ\n3k14IhT9Hec214+9tfktfApvuVyIOiUD1WvL1pqmSxebGbjx8FXV5GYnmQogP+Dz\nmk9/bx68rLcOIl4SKbeW/K6nPwKBgQC3Gcjb7JgmCYpXdGGO4yW6OE9tgdzz+Vrx\nYbgc0YmdOAsYojovdAms3Fz8akoZiXtQ6xjPDm/6hUAQyJa57aIaw1Vz/OUXXZYt\neODPF8sFzdl+VeCuB0Fn5Vkx81SxUJ9aV0eDQDocHl/Tsx+6tMjTLlCgs/lzq8KZ\nabGf13hqBwKBgQCSrzKR0QV4VMSvJ6pC20ScuYp+/zjsA/j9XzYzirdU2T+cNsSK\n4iDNUmgx64ng98NMYZuMVNAp9FXKqI4UuG5pHfM1sRo5x0DfYs6xoDDC3Ti29dwf\naCmQCvS6dA1x171OeisRzW4Glx+uQC43HmtMBY29SWyhqXe0nupLfqATaQKBgQCV\nx/76gRmZjBZiIi8oPwJ+yk+XSjNgVSwi54g/8tz7Anx5Q0QLy4WapY1fYueI6mE5\nOYhK4QmTSuu0jxJVuGHyOLYvssIJEiKmwgpM/q6y6ciwQzoPwpmrjv8fEGnIvyYM\nNfenE6Q1mldTi2U6S2c48ds9CtzV1bzT2JVYJ2A2gwKBgEBMgAS4VPQCxdNPBBXh\nNl1Fi4FXrzwrQTqxCPL+nGlzgsLsfhD703l+yADwyhnt1/7W9p8qC/s+xKggIUFU\negmXn/BfX6gajfhFyu3lhppg2LlBgCaDzxu+4tA3dASeM9gjkBXs6fHL3c6pT2yb\nqSpWdYlhkJtLaAzB5uGLt4yv\n-----END PRIVATE KEY-----\n",
+  "client_email": "heart-attack-dataset@heart-attack-dataset.iam.gserviceaccount.com",
+  "client_id": "116191863227807204539",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/heart-attack-dataset%40heart-attack-dataset.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

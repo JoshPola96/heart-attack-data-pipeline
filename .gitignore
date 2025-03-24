@@ -1,23 +1,26 @@
 # Ignore virtual environments
 venv/
 .env
+*.venv
 
-# Ignore logs
-logs/
-*.log
-
-# Ignore compiled Python files
+# Ignore Python cache files
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# Ignore Airflow-related files
-airflow/
-airflow.cfg
-untracked_dag_runs/
+# Ignore logs
+logs/
+*.log
 
-# Ignore Terraform state files
-terraform/.terraform/
-terraform/*.tfstate
-terraform/*.tfstate.backup
+# Ignore environment-related files
+.env
+*.env
+*.ini
+*.cfg
+
+# Ignore compiled Python files
+*.so
+*.egg-info/
+dist/
+build/
