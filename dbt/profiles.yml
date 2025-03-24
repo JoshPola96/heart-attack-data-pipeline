@@ -8,4 +8,4 @@ heart_attack:
       dataset: heart_attack_dataset
       location: us-central1
       threads: 1
-      keyfile: /home/josh/heart-attack-prediction/airflow/heart-attack-dataset-3b6b3d2bddb8.json
+      keyfile: /home/josh/heart-attack-prediction/service-account-key/heart-attack-dataset-35065960d254.json

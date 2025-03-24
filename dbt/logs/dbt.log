@@ -3327,3 +3327,459 @@ SELECT * FROM `heart-attack-dataset`.`heart_attack_dataset`.`cleaned_data`
 [0m07:46:26.970227 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f067635ed50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0674281460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0640252ea0>]}
 [0m07:46:26.970467 [debug] [MainThread]: Flushing usage events
 [0m07:46:28.238109 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:40:39.271226 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faacd8a6e70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faacce68140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faacd205340>]}
+
+
+============================== 12:40:39.277067 | 43fa6bcc-44dd-412a-9869-2f4487ddb4ca ==============================
+[0m12:40:39.277067 [info ] [MainThread]: Running with dbt=1.9.3
+[0m12:40:39.277597 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/josh/heart-attack-prediction/dbt', 'log_path': '/home/josh/heart-attack-prediction/dbt/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt compile', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m12:40:40.894657 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '43fa6bcc-44dd-412a-9869-2f4487ddb4ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faa957f2bd0>]}
+[0m12:40:40.935004 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '43fa6bcc-44dd-412a-9869-2f4487ddb4ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faacd740860>]}
+[0m12:40:40.935585 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m12:40:41.023122 [debug] [MainThread]: checksum: 5671c00892cdbcef29c3b00cc5ba7510c3d18a35c883caeb9ab9ee266dc29c8f, vars: {}, profile: , target: , version: 1.9.3
+[0m12:40:41.078709 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m12:40:41.079079 [debug] [MainThread]: previous checksum: 5671c00892cdbcef29c3b00cc5ba7510c3d18a35c883caeb9ab9ee266dc29c8f, current checksum: 832ccc19e5146dd41eb231211d90ac7a4e1ff8e4c869b5af4f43785a9ac82e23
+[0m12:40:41.079300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '43fa6bcc-44dd-412a-9869-2f4487ddb4ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faa950351f0>]}
+[0m12:40:41.911886 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '43fa6bcc-44dd-412a-9869-2f4487ddb4ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faa95082030>]}
+[0m12:40:41.958687 [debug] [MainThread]: Wrote artifact WritableManifest to /home/josh/heart-attack-prediction/dbt/target/manifest.json
+[0m12:40:41.960849 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/josh/heart-attack-prediction/dbt/target/semantic_manifest.json
+[0m12:40:41.995681 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '43fa6bcc-44dd-412a-9869-2f4487ddb4ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faa8ed63bf0>]}
+[0m12:40:41.996067 [info ] [MainThread]: Found 2 models, 1 source, 491 macros
+[0m12:40:41.996299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '43fa6bcc-44dd-412a-9869-2f4487ddb4ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faa8ede9550>]}
+[0m12:40:41.997505 [info ] [MainThread]: 
+[0m12:40:41.997768 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:40:41.997962 [info ] [MainThread]: 
+[0m12:40:41.998375 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m12:40:42.001453 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_heart-attack-dataset_heart_attack_dataset'
+[0m12:40:42.001898 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:40:42.235330 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:40:42.265600 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:40:42.265942 [debug] [MainThread]: Connection 'list_heart-attack-dataset_heart_attack_dataset' was properly closed.
+[0m12:40:42.266270 [error] [MainThread]: Encountered an error:
+('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+[0m12:40:42.274859 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 235, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 311, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 328, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/dbt/cli/main.py", line 341, in compile
+    results = task.run()
+              ^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/dbt/task/runnable.py", line 590, in run
+    result = self.execute_with_hooks(selected_uids)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/dbt/task/runnable.py", line 528, in execute_with_hooks
+    before_run_status = self.before_run(adapter, selected_uids)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/dbt/task/runnable.py", line 504, in before_run
+    self.populate_adapter_cache(adapter)
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/dbt/task/runnable.py", line 494, in populate_adapter_cache
+    adapter.set_relations_cache(cachable_nodes)
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/dbt/adapters/base/impl.py", line 610, in set_relations_cache
+    self._relations_cache_for_schemas(relation_configs, required_schemas)
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/dbt/adapters/base/impl.py", line 586, in _relations_cache_for_schemas
+    for relation in future.result():
+                    ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/dbt_common/utils/executor.py", line 16, in connected
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/dbt/adapters/bigquery/impl.py", line 293, in list_relations_without_caching
+    return [self._bq_table_to_relation(table) for table in all_tables]  # type: ignore[misc]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/api_core/page_iterator.py", line 208, in _items_iter
+    for page in self._page_iter(increment=False):
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/api_core/page_iterator.py", line 244, in _page_iter
+    page = self._next_page()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/api_core/page_iterator.py", line 373, in _next_page
+    response = self._get_next_page_response()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/api_core/page_iterator.py", line 432, in _get_next_page_response
+    return self.api_request(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/cloud/bigquery/client.py", line 1661, in api_request
+    return self._call_api(
+           ^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/cloud/bigquery/client.py", line 843, in _call_api
+    return call()
+           ^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/api_core/retry/retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/api_core/retry/retry_unary.py", line 144, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/cloud/_http/__init__.py", line 482, in api_request
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/cloud/_http/__init__.py", line 341, in _make_request
+    return self._do_request(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/cloud/_http/__init__.py", line 379, in _do_request
+    return self.http.request(
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/auth/transport/requests.py", line 533, in request
+    self.credentials.before_request(auth_request, method, url, request_headers)
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/auth/credentials.py", line 239, in before_request
+    self._blocking_refresh(request)
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/auth/credentials.py", line 202, in _blocking_refresh
+    self.refresh(request)
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/oauth2/service_account.py", line 448, in refresh
+    access_token, expiry, _ = _client.jwt_grant(
+                              ^^^^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/oauth2/_client.py", line 299, in jwt_grant
+    response_data = _token_endpoint_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/oauth2/_client.py", line 270, in _token_endpoint_request
+    _handle_error_response(response_data, retryable_error)
+  File "/home/josh/heart-attack-prediction/venv/lib/python3.12/site-packages/google/oauth2/_client.py", line 69, in _handle_error_response
+    raise exceptions.RefreshError(
+google.auth.exceptions.RefreshError: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+
+[0m12:40:42.276696 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 3.0423198, "process_in_blocks": "312272", "process_kernel_time": 1.655205, "process_mem_max_rss": "265132", "process_out_blocks": "30496", "process_user_time": 3.832589}
+[0m12:40:42.277177 [debug] [MainThread]: Command `dbt compile` failed at 12:40:42.277024 after 3.04 seconds
+[0m12:40:42.277527 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faad074f230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faa8edb2720>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faa8ede9250>]}
+[0m12:40:42.277846 [debug] [MainThread]: Flushing usage events
+[0m12:40:43.790261 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:41:42.232379 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9466d39730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9467af6a80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9466d38c50>]}
+
+
+============================== 12:41:42.236621 | 0c9d1d61-a81e-4165-8e30-2b94c6970d1b ==============================
+[0m12:41:42.236621 [info ] [MainThread]: Running with dbt=1.9.3
+[0m12:41:42.237028 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/josh/heart-attack-prediction/dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/home/josh/heart-attack-prediction/dbt/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt compile', 'send_anonymous_usage_stats': 'True'}
+[0m12:41:43.627788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0c9d1d61-a81e-4165-8e30-2b94c6970d1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9434a37710>]}
+[0m12:41:43.667918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0c9d1d61-a81e-4165-8e30-2b94c6970d1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f942fbcd1c0>]}
+[0m12:41:43.668451 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m12:41:43.760672 [debug] [MainThread]: checksum: 5671c00892cdbcef29c3b00cc5ba7510c3d18a35c883caeb9ab9ee266dc29c8f, vars: {}, profile: , target: , version: 1.9.3
+[0m12:41:43.871359 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:41:43.871674 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:41:43.894281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0c9d1d61-a81e-4165-8e30-2b94c6970d1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f942f6a9250>]}
+[0m12:41:43.939528 [debug] [MainThread]: Wrote artifact WritableManifest to /home/josh/heart-attack-prediction/dbt/target/manifest.json
+[0m12:41:43.941520 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/josh/heart-attack-prediction/dbt/target/semantic_manifest.json
+[0m12:41:43.958092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0c9d1d61-a81e-4165-8e30-2b94c6970d1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f942f216b10>]}
+[0m12:41:43.958449 [info ] [MainThread]: Found 2 models, 1 source, 491 macros
+[0m12:41:43.958687 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0c9d1d61-a81e-4165-8e30-2b94c6970d1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9435680e90>]}
+[0m12:41:43.959774 [info ] [MainThread]: 
+[0m12:41:43.960019 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:41:43.960203 [info ] [MainThread]: 
+[0m12:41:43.960536 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m12:41:44.042731 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_heart-attack-dataset_heart_attack_dataset'
+[0m12:41:44.043238 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:41:44.890579 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0c9d1d61-a81e-4165-8e30-2b94c6970d1b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f942f3bc0b0>]}
+[0m12:41:44.890951 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:41:44.927908 [debug] [Thread-1 (]: Began running node model.heart_attack_dataset.cleaned_data
+[0m12:41:44.928429 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_heart-attack-dataset_heart_attack_dataset, now model.heart_attack_dataset.cleaned_data)
+[0m12:41:44.928677 [debug] [Thread-1 (]: Began compiling node model.heart_attack_dataset.cleaned_data
+[0m12:41:44.935786 [debug] [Thread-1 (]: Writing injected SQL for node "model.heart_attack_dataset.cleaned_data"
+[0m12:41:44.938520 [debug] [Thread-1 (]: Began executing node model.heart_attack_dataset.cleaned_data
+[0m12:41:44.938965 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:41:44.968674 [debug] [Thread-1 (]: Finished running node model.heart_attack_dataset.cleaned_data
+[0m12:41:44.969850 [debug] [Thread-1 (]: Began running node model.heart_attack_dataset.optimized_table
+[0m12:41:44.970238 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.heart_attack_dataset.cleaned_data, now model.heart_attack_dataset.optimized_table)
+[0m12:41:44.970479 [debug] [Thread-1 (]: Began compiling node model.heart_attack_dataset.optimized_table
+[0m12:41:44.972962 [debug] [Thread-1 (]: Writing injected SQL for node "model.heart_attack_dataset.optimized_table"
+[0m12:41:44.973519 [debug] [Thread-1 (]: Began executing node model.heart_attack_dataset.optimized_table
+[0m12:41:44.973792 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:41:45.003814 [debug] [Thread-1 (]: Finished running node model.heart_attack_dataset.optimized_table
+[0m12:41:45.005103 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:41:45.005481 [debug] [MainThread]: Connection 'model.heart_attack_dataset.optimized_table' was properly closed.
+[0m12:41:45.006070 [debug] [MainThread]: Command end result
+[0m12:41:45.019769 [debug] [MainThread]: Wrote artifact WritableManifest to /home/josh/heart-attack-prediction/dbt/target/manifest.json
+[0m12:41:45.021103 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/josh/heart-attack-prediction/dbt/target/semantic_manifest.json
+[0m12:41:45.025605 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/josh/heart-attack-prediction/dbt/target/run_results.json
+[0m12:41:45.027054 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 2.8376286, "process_in_blocks": "278184", "process_kernel_time": 1.520236, "process_mem_max_rss": "262440", "process_out_blocks": "2024", "process_user_time": 2.374748}
+[0m12:41:45.027480 [debug] [MainThread]: Command `dbt compile` succeeded at 12:41:45.027382 after 2.84 seconds
+[0m12:41:45.027837 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f94678dd370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f94678dc800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f942f223c20>]}
+[0m12:41:45.028170 [debug] [MainThread]: Flushing usage events
+[0m12:41:46.358501 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:41:47.844025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fddab90eab0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fddab8d9010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fddab8d8fb0>]}
+
+
+============================== 12:41:47.846647 | e78bcef2-4eac-4a49-b583-c9c35a1a0413 ==============================
+[0m12:41:47.846647 [info ] [MainThread]: Running with dbt=1.9.3
+[0m12:41:47.846981 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/josh/heart-attack-prediction/dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/home/josh/heart-attack-prediction/dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt build --target dev', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:41:48.519520 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e78bcef2-4eac-4a49-b583-c9c35a1a0413', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd78458b00>]}
+[0m12:41:48.561631 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e78bcef2-4eac-4a49-b583-c9c35a1a0413', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd794228d0>]}
+[0m12:41:48.562197 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m12:41:48.647440 [debug] [MainThread]: checksum: 832ccc19e5146dd41eb231211d90ac7a4e1ff8e4c869b5af4f43785a9ac82e23, vars: {}, profile: , target: dev, version: 1.9.3
+[0m12:41:48.704600 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m12:41:48.704970 [debug] [MainThread]: previous checksum: 832ccc19e5146dd41eb231211d90ac7a4e1ff8e4c869b5af4f43785a9ac82e23, current checksum: 5671c00892cdbcef29c3b00cc5ba7510c3d18a35c883caeb9ab9ee266dc29c8f
+[0m12:41:48.705208 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e78bcef2-4eac-4a49-b583-c9c35a1a0413', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fddab5cf410>]}
+[0m12:41:49.492151 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e78bcef2-4eac-4a49-b583-c9c35a1a0413', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd7196dc10>]}
+[0m12:41:49.534816 [debug] [MainThread]: Wrote artifact WritableManifest to /home/josh/heart-attack-prediction/dbt/target/manifest.json
+[0m12:41:49.536227 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/josh/heart-attack-prediction/dbt/target/semantic_manifest.json
+[0m12:41:49.666450 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e78bcef2-4eac-4a49-b583-c9c35a1a0413', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd71875940>]}
+[0m12:41:49.666851 [info ] [MainThread]: Found 2 models, 1 source, 491 macros
+[0m12:41:49.668062 [info ] [MainThread]: 
+[0m12:41:49.668302 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:41:49.668527 [info ] [MainThread]: 
+[0m12:41:49.668879 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m12:41:49.671603 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_heart-attack-dataset'
+[0m12:41:49.672068 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:41:50.543282 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_heart-attack-dataset, now list_heart-attack-dataset_heart_attack_dataset)
+[0m12:41:50.543830 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:41:51.464194 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e78bcef2-4eac-4a49-b583-c9c35a1a0413', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd73b22780>]}
+[0m12:41:51.464690 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:41:51.496058 [debug] [Thread-1 (]: Began running node model.heart_attack_dataset.cleaned_data
+[0m12:41:51.496526 [info ] [Thread-1 (]: 1 of 2 START sql view model heart_attack_dataset.cleaned_data .................. [RUN]
+[0m12:41:51.496877 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_heart-attack-dataset_heart_attack_dataset, now model.heart_attack_dataset.cleaned_data)
+[0m12:41:51.497107 [debug] [Thread-1 (]: Began compiling node model.heart_attack_dataset.cleaned_data
+[0m12:41:51.502655 [debug] [Thread-1 (]: Writing injected SQL for node "model.heart_attack_dataset.cleaned_data"
+[0m12:41:51.503101 [debug] [Thread-1 (]: Began executing node model.heart_attack_dataset.cleaned_data
+[0m12:41:51.523191 [debug] [Thread-1 (]: Writing runtime sql for node "model.heart_attack_dataset.cleaned_data"
+[0m12:41:51.525662 [debug] [Thread-1 (]: On model.heart_attack_dataset.cleaned_data: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "heart_attack", "target_name": "dev", "node_id": "model.heart_attack_dataset.cleaned_data"} */
+
+
+  create or replace view `heart-attack-dataset`.`heart_attack_dataset`.`cleaned_data`
+  OPTIONS()
+  as 
+
+SELECT
+    -- Standardize categorical columns (convert to lowercase)
+    LOWER(`gender`) AS gender,
+    LOWER(`region`) AS region,
+    LOWER(`income_level`) AS income_level,
+    LOWER(`smoking_status`) AS smoking_status,
+    LOWER(`alcohol_consumption`) AS alcohol_consumption,
+    LOWER(`physical_activity`) AS physical_activity,
+    LOWER(`dietary_habits`) AS dietary_habits,
+    LOWER(`air_pollution_exposure`) AS air_pollution_exposure,
+    LOWER(`stress_level`) AS stress_level,
+    LOWER(`EKG_results`) AS ekg_results,  -- Fixed column casing
+
+    -- Convert binary categorical columns to Boolean
+    CAST(`hypertension` AS BOOLEAN) AS hypertension,
+    CAST(`diabetes` AS BOOLEAN) AS diabetes,
+    CAST(`obesity` AS BOOLEAN) AS obesity,
+    CAST(`family_history` AS BOOLEAN) AS family_history,
+    CAST(`previous_heart_disease` AS BOOLEAN) AS previous_heart_disease,
+    CAST(`medication_usage` AS BOOLEAN) AS medication_usage,
+    CAST(`participated_in_free_screening` AS BOOLEAN) AS participated_in_free_screening,
+    CAST(`heart_attack` AS BOOLEAN) AS heart_attack,
+
+    -- Keep numerical columns unchanged
+    `age`,
+    `cholesterol_level`,
+    `waist_circumference`,
+    `sleep_hours`,
+    `blood_pressure_systolic`,
+    `blood_pressure_diastolic`,
+    `fasting_blood_sugar`,
+    `cholesterol_hdl`,
+    `cholesterol_ldl`,
+    `triglycerides`
+
+FROM `heart-attack-dataset`.`heart_attack_dataset`.`heart_attack_data`;
+
+
+[0m12:41:51.526148 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:41:52.820330 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=heart-attack-dataset&j=bq:us-central1:6c52869c-01a5-40ff-b2a7-6143477a3e80&page=queryresults
+[0m12:41:53.873537 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e78bcef2-4eac-4a49-b583-c9c35a1a0413', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd73fcffe0>]}
+[0m12:41:53.874097 [info ] [Thread-1 (]: 1 of 2 OK created sql view model heart_attack_dataset.cleaned_data ............. [[32mCREATE VIEW (0 processed)[0m in 2.37s]
+[0m12:41:53.874558 [debug] [Thread-1 (]: Finished running node model.heart_attack_dataset.cleaned_data
+[0m12:41:53.875288 [debug] [Thread-1 (]: Began running node model.heart_attack_dataset.optimized_table
+[0m12:41:53.875620 [info ] [Thread-1 (]: 2 of 2 START sql table model heart_attack_dataset.optimized_table .............. [RUN]
+[0m12:41:53.875962 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.heart_attack_dataset.cleaned_data, now model.heart_attack_dataset.optimized_table)
+[0m12:41:53.876255 [debug] [Thread-1 (]: Began compiling node model.heart_attack_dataset.optimized_table
+[0m12:41:53.880162 [debug] [Thread-1 (]: Writing injected SQL for node "model.heart_attack_dataset.optimized_table"
+[0m12:41:53.880900 [debug] [Thread-1 (]: Began executing node model.heart_attack_dataset.optimized_table
+[0m12:41:53.905432 [debug] [Thread-1 (]: Writing runtime sql for node "model.heart_attack_dataset.optimized_table"
+[0m12:41:53.906035 [debug] [Thread-1 (]: On model.heart_attack_dataset.optimized_table: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "heart_attack", "target_name": "dev", "node_id": "model.heart_attack_dataset.optimized_table"} */
+
+  
+    
+
+    create or replace table `heart-attack-dataset`.`heart_attack_dataset`.`optimized_table`
+      
+    
+    cluster by gender, region, hypertension, diabetes
+
+    OPTIONS()
+    as (
+      
+
+SELECT * FROM `heart-attack-dataset`.`heart_attack_dataset`.`cleaned_data`
+    );
+  
+[0m12:41:53.906404 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:41:55.377276 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=heart-attack-dataset&j=bq:us-central1:01bc3294-5423-40cd-b130-8edccd6c5c7e&page=queryresults
+[0m12:41:59.496552 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e78bcef2-4eac-4a49-b583-c9c35a1a0413', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd71662c00>]}
+[0m12:41:59.497076 [info ] [Thread-1 (]: 2 of 2 OK created sql table model heart_attack_dataset.optimized_table ......... [[32mCREATE TABLE (158.4k rows, 33.3 MiB processed)[0m in 5.62s]
+[0m12:41:59.500722 [debug] [Thread-1 (]: Finished running node model.heart_attack_dataset.optimized_table
+[0m12:41:59.502445 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:41:59.531452 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:41:59.531737 [debug] [MainThread]: Connection 'model.heart_attack_dataset.optimized_table' was properly closed.
+[0m12:41:59.531962 [info ] [MainThread]: 
+[0m12:41:59.532185 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 9.86 seconds (9.86s).
+[0m12:41:59.532763 [debug] [MainThread]: Command end result
+[0m12:41:59.545602 [debug] [MainThread]: Wrote artifact WritableManifest to /home/josh/heart-attack-prediction/dbt/target/manifest.json
+[0m12:41:59.546778 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/josh/heart-attack-prediction/dbt/target/semantic_manifest.json
+[0m12:41:59.550460 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/josh/heart-attack-prediction/dbt/target/run_results.json
+[0m12:41:59.550684 [info ] [MainThread]: 
+[0m12:41:59.550959 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:41:59.551155 [info ] [MainThread]: 
+[0m12:41:59.551385 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m12:41:59.552071 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 11.744831, "process_in_blocks": "5176", "process_kernel_time": 1.259249, "process_mem_max_rss": "300160", "process_out_blocks": "4344", "process_user_time": 3.228077}
+[0m12:41:59.552355 [debug] [MainThread]: Command `dbt build` succeeded at 12:41:59.552287 after 11.75 seconds
+[0m12:41:59.552593 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdd73a8b560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fddab63b200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fddab63b6e0>]}
+[0m12:41:59.552825 [debug] [MainThread]: Flushing usage events
+[0m12:42:00.765026 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:42:02.290111 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcc22788770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcc2065e780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcc21c90f80>]}
+
+
+============================== 12:42:02.293057 | e58da2ef-d7e0-4924-ae43-3ba4c40904c6 ==============================
+[0m12:42:02.293057 [info ] [MainThread]: Running with dbt=1.9.3
+[0m12:42:02.293418 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/josh/heart-attack-prediction/dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/home/josh/heart-attack-prediction/dbt/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --target dev', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:42:02.973749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e58da2ef-d7e0-4924-ae43-3ba4c40904c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcc2065e780>]}
+[0m12:42:03.013556 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e58da2ef-d7e0-4924-ae43-3ba4c40904c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcbecec0da0>]}
+[0m12:42:03.014088 [info ] [MainThread]: Registered adapter: bigquery=1.9.1
+[0m12:42:03.098723 [debug] [MainThread]: checksum: 832ccc19e5146dd41eb231211d90ac7a4e1ff8e4c869b5af4f43785a9ac82e23, vars: {}, profile: , target: dev, version: 1.9.3
+[0m12:42:03.166220 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:42:03.166530 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:42:03.189202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e58da2ef-d7e0-4924-ae43-3ba4c40904c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcbecd49190>]}
+[0m12:42:03.235249 [debug] [MainThread]: Wrote artifact WritableManifest to /home/josh/heart-attack-prediction/dbt/target/manifest.json
+[0m12:42:03.236659 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/josh/heart-attack-prediction/dbt/target/semantic_manifest.json
+[0m12:42:03.245372 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e58da2ef-d7e0-4924-ae43-3ba4c40904c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcbecaab8f0>]}
+[0m12:42:03.245756 [info ] [MainThread]: Found 2 models, 1 source, 491 macros
+[0m12:42:03.246016 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e58da2ef-d7e0-4924-ae43-3ba4c40904c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcbecd48d40>]}
+[0m12:42:03.247590 [info ] [MainThread]: 
+[0m12:42:03.247880 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:42:03.248082 [info ] [MainThread]: 
+[0m12:42:03.248459 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m12:42:03.251522 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_heart-attack-dataset'
+[0m12:42:03.251967 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:42:04.305810 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_heart-attack-dataset, now list_heart-attack-dataset_heart_attack_dataset)
+[0m12:42:04.306435 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:42:05.110382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e58da2ef-d7e0-4924-ae43-3ba4c40904c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcc21ef4ec0>]}
+[0m12:42:05.111353 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:42:05.146498 [debug] [Thread-1 (]: Began running node model.heart_attack_dataset.cleaned_data
+[0m12:42:05.146968 [info ] [Thread-1 (]: 1 of 2 START sql view model heart_attack_dataset.cleaned_data .................. [RUN]
+[0m12:42:05.147276 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_heart-attack-dataset_heart_attack_dataset, now model.heart_attack_dataset.cleaned_data)
+[0m12:42:05.147508 [debug] [Thread-1 (]: Began compiling node model.heart_attack_dataset.cleaned_data
+[0m12:42:05.153849 [debug] [Thread-1 (]: Writing injected SQL for node "model.heart_attack_dataset.cleaned_data"
+[0m12:42:05.154278 [debug] [Thread-1 (]: Began executing node model.heart_attack_dataset.cleaned_data
+[0m12:42:05.175045 [debug] [Thread-1 (]: Writing runtime sql for node "model.heart_attack_dataset.cleaned_data"
+[0m12:42:05.175563 [debug] [Thread-1 (]: On model.heart_attack_dataset.cleaned_data: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "heart_attack", "target_name": "dev", "node_id": "model.heart_attack_dataset.cleaned_data"} */
+
+
+  create or replace view `heart-attack-dataset`.`heart_attack_dataset`.`cleaned_data`
+  OPTIONS()
+  as 
+
+SELECT
+    -- Standardize categorical columns (convert to lowercase)
+    LOWER(`gender`) AS gender,
+    LOWER(`region`) AS region,
+    LOWER(`income_level`) AS income_level,
+    LOWER(`smoking_status`) AS smoking_status,
+    LOWER(`alcohol_consumption`) AS alcohol_consumption,
+    LOWER(`physical_activity`) AS physical_activity,
+    LOWER(`dietary_habits`) AS dietary_habits,
+    LOWER(`air_pollution_exposure`) AS air_pollution_exposure,
+    LOWER(`stress_level`) AS stress_level,
+    LOWER(`EKG_results`) AS ekg_results,  -- Fixed column casing
+
+    -- Convert binary categorical columns to Boolean
+    CAST(`hypertension` AS BOOLEAN) AS hypertension,
+    CAST(`diabetes` AS BOOLEAN) AS diabetes,
+    CAST(`obesity` AS BOOLEAN) AS obesity,
+    CAST(`family_history` AS BOOLEAN) AS family_history,
+    CAST(`previous_heart_disease` AS BOOLEAN) AS previous_heart_disease,
+    CAST(`medication_usage` AS BOOLEAN) AS medication_usage,
+    CAST(`participated_in_free_screening` AS BOOLEAN) AS participated_in_free_screening,
+    CAST(`heart_attack` AS BOOLEAN) AS heart_attack,
+
+    -- Keep numerical columns unchanged
+    `age`,
+    `cholesterol_level`,
+    `waist_circumference`,
+    `sleep_hours`,
+    `blood_pressure_systolic`,
+    `blood_pressure_diastolic`,
+    `fasting_blood_sugar`,
+    `cholesterol_hdl`,
+    `cholesterol_ldl`,
+    `triglycerides`
+
+FROM `heart-attack-dataset`.`heart_attack_dataset`.`heart_attack_data`;
+
+
+[0m12:42:05.175883 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:42:06.552411 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=heart-attack-dataset&j=bq:us-central1:dd995ea3-ed69-4df2-bd2b-53a775ef5d37&page=queryresults
+[0m12:42:07.441741 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e58da2ef-d7e0-4924-ae43-3ba4c40904c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcbecf8fd70>]}
+[0m12:42:07.442268 [info ] [Thread-1 (]: 1 of 2 OK created sql view model heart_attack_dataset.cleaned_data ............. [[32mCREATE VIEW (0 processed)[0m in 2.29s]
+[0m12:42:07.442673 [debug] [Thread-1 (]: Finished running node model.heart_attack_dataset.cleaned_data
+[0m12:42:07.443527 [debug] [Thread-1 (]: Began running node model.heart_attack_dataset.optimized_table
+[0m12:42:07.443888 [info ] [Thread-1 (]: 2 of 2 START sql table model heart_attack_dataset.optimized_table .............. [RUN]
+[0m12:42:07.444447 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.heart_attack_dataset.cleaned_data, now model.heart_attack_dataset.optimized_table)
+[0m12:42:07.444838 [debug] [Thread-1 (]: Began compiling node model.heart_attack_dataset.optimized_table
+[0m12:42:07.448469 [debug] [Thread-1 (]: Writing injected SQL for node "model.heart_attack_dataset.optimized_table"
+[0m12:42:07.448894 [debug] [Thread-1 (]: Began executing node model.heart_attack_dataset.optimized_table
+[0m12:42:07.461305 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:42:08.281737 [debug] [Thread-1 (]: Hard refreshing `heart-attack-dataset`.`heart_attack_dataset`.`optimized_table` because it is not replaceable
+[0m12:42:08.814422 [debug] [Thread-1 (]: Writing runtime sql for node "model.heart_attack_dataset.optimized_table"
+[0m12:42:08.814986 [debug] [Thread-1 (]: On model.heart_attack_dataset.optimized_table: /* {"app": "dbt", "dbt_version": "1.9.3", "profile_name": "heart_attack", "target_name": "dev", "node_id": "model.heart_attack_dataset.optimized_table"} */
+
+  
+    
+
+    create or replace table `heart-attack-dataset`.`heart_attack_dataset`.`optimized_table`
+      
+    
+    cluster by gender, region, hypertension, diabetes
+
+    OPTIONS()
+    as (
+      
+
+SELECT * FROM `heart-attack-dataset`.`heart_attack_dataset`.`cleaned_data`
+    );
+  
+[0m12:42:09.730379 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=heart-attack-dataset&j=bq:us-central1:d657ff33-ce40-4ad0-87a1-bb872d17b6cf&page=queryresults
+[0m12:42:13.421264 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e58da2ef-d7e0-4924-ae43-3ba4c40904c6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcbed7011c0>]}
+[0m12:42:13.421809 [info ] [Thread-1 (]: 2 of 2 OK created sql table model heart_attack_dataset.optimized_table ......... [[32mCREATE TABLE (158.4k rows, 33.3 MiB processed)[0m in 5.98s]
+[0m12:42:13.422229 [debug] [Thread-1 (]: Finished running node model.heart_attack_dataset.optimized_table
+[0m12:42:13.423554 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:42:13.453254 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:42:13.453625 [debug] [MainThread]: Connection 'model.heart_attack_dataset.optimized_table' was properly closed.
+[0m12:42:13.453864 [info ] [MainThread]: 
+[0m12:42:13.454096 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 10.21 seconds (10.21s).
+[0m12:42:13.454648 [debug] [MainThread]: Command end result
+[0m12:42:13.467498 [debug] [MainThread]: Wrote artifact WritableManifest to /home/josh/heart-attack-prediction/dbt/target/manifest.json
+[0m12:42:13.468750 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/josh/heart-attack-prediction/dbt/target/semantic_manifest.json
+[0m12:42:13.472689 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/josh/heart-attack-prediction/dbt/target/run_results.json
+[0m12:42:13.472919 [info ] [MainThread]: 
+[0m12:42:13.473191 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:42:13.473427 [info ] [MainThread]: 
+[0m12:42:13.473701 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m12:42:13.474365 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 11.221653, "process_in_blocks": "0", "process_kernel_time": 1.39782, "process_mem_max_rss": "264632", "process_out_blocks": "2040", "process_user_time": 2.306404}
+[0m12:42:13.474654 [debug] [MainThread]: Command `dbt run` succeeded at 12:42:13.474587 after 11.22 seconds
+[0m12:42:13.474897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcbe6533f80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcbe6533fb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcc20fa67e0>]}
+[0m12:42:13.475129 [debug] [MainThread]: Flushing usage events
+[0m12:42:14.517650 [debug] [MainThread]: An error was encountered while trying to flush usage events
