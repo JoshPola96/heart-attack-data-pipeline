@@ -1,4 +1,4 @@
-# **Heart Attack Prediction in Indonesia - Data Engineering Zoomcamp - https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main**
+# **Heart Attack Prediction in Indonesia - Data Engineering Zoomcamp - [GitHub](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main)**
 
 ## 📌 **Project Overview**
 This project builds an **end-to-end data pipeline** for analyzing heart attack prediction in Indonesia. Using **Google Cloud Platform (GCP)** and various **data engineering tools**, the pipeline automates data ingestion, transformation, and visualization to provide insights via **Power BI dashboards**.
@@ -11,13 +11,13 @@ Cardiovascular diseases, including heart attacks, are a leading cause of death w
 ---
 
 ## 🛠️ **Tech Stack**
-- **Cloud Infrastructure:** Terraform (GCP setup)
-- **Data Orchestration:** Apache Airflow (Google Cloud Composer)
-- **Storage & Processing:** Google Cloud Storage (GCS) & BigQuery
-- **Data Transformation:** dbt (data modeling)
-- **Dashboarding:** Power BI
-- **CI/CD:** GitHub Actions
-- **Scripting & Automation:** Python & Bash
+- **Cloud Infrastructure:** Terraform (GCP setup)  
+- **Data Orchestration:** Apache Airflow (Google Cloud Composer)  
+- **Storage & Processing:** Google Cloud Storage (GCS) & BigQuery  
+- **Data Transformation:** dbt (data modeling)  
+- **Dashboarding:** Power BI  
+- **CI/CD:** GitHub Actions  
+- **Scripting & Automation:** Python & Bash  
 
 ---
 
@@ -36,16 +36,16 @@ The pipeline consists of **automated scripts** located in the `scripts/` folder,
 ## 📂 **Project Structure**
 ```
 heart-attack-prediction/
-│── terraform/       # Infrastructure as Code (Terraform)
-│── airflow/         # Airflow DAGs for orchestration
-│── data/            # Raw and processed dataset storage
-│── dbt/             # dbt models for transformation
-│── powerbi/         # Power BI dashboards
-│── scripts/         # Helper scripts (data ingestion, automation)
-│── service-account-key/ # Store your GCP service account JSON key
-│── .github/         # GitHub Actions for CI/CD
-│── requirements.txt # Python dependencies
-│── README.md        # Project documentation
+│── terraform/        # Infrastructure as Code (Terraform)
+│── airflow/          # Airflow DAGs for orchestration
+│── data/             # Raw and processed dataset storage
+│── dbt/              # dbt models for transformation
+│── powerbi/          # Power BI dashboards
+│── scripts/          # Helper scripts (data ingestion, automation)
+│── service-account-key/  # Store your GCP service account JSON key
+│── .github/          # GitHub Actions for CI/CD
+│── requirements.txt  # Python dependencies
+│── README.md         # Project documentation
 ```
 
 ---
@@ -68,27 +68,28 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-**Please take care to install any additional dependancies as you work with the scripts, apolgoies for that**.
+**Please take care to install any additional dependencies as you work with the scripts. Apologies for that.**
 
 ---
 
 ### **3️⃣ Configure Google Cloud Authentication**
 Before running Terraform and Airflow, you must set up authentication:
-1. **Create a Service Account on GCP**  
-   - Navigate to [Google Cloud Console](https://console.cloud.google.com/)
-   - Go to **IAM & Admin > Service Accounts**
-   - Create a new service account with the necessary permissions (BigQuery Admin, Storage Admin, Composer Admin).
-   - Generate a **JSON key file** and download it.
 
-2. **Move the JSON key file into the project directory:**
-   ```bash
-   mv <downloaded-key>.json ~/heart-attack-prediction/service-account-key/
-   ```
+#### **1. Create a Service Account on GCP**
+- Navigate to [Google Cloud Console](https://console.cloud.google.com/)
+- Go to **IAM & Admin > Service Accounts**
+- Create a new service account with the necessary permissions (**BigQuery Admin, Storage Admin, Composer Admin**).
+- Generate a **JSON key file** and download it.
 
-3. **Set the environment variable for authentication:**
-   ```bash
-   export GOOGLE_APPLICATION_CREDENTIALS=~/heart-attack-prediction/service-account-key/<your-key-file>.json
-   ```
+#### **2. Move the JSON key file into the project directory**
+```bash
+mv ~/Downloads/<your-key-file>.json ~/heart-attack-prediction/service-account-key/
+```
+
+#### **3. Set the environment variable for authentication**
+```bash
+export GOOGLE_APPLICATION_CREDENTIALS=~/heart-attack-prediction/service-account-key/<your-key-file>.json
+```
 
 ---
 
@@ -114,21 +115,42 @@ This will provision:
 ---
 
 ### **6️⃣ Configure Airflow & Upload DAGs**
-1. Ensure that the **service account key** is placed in:
-   ```
-   ~/heart-attack-prediction/service-account-key/
-   ```
-2. Update Airflow DAG configuration files:
-   - If any **file paths** need to be updated, modify the `airflow/dags/` scripts.
-3. Deploy DAGs to Cloud Composer:
-   ```bash
-   bash scripts/execute-airflow.sh
-   ```
+Before running Airflow, update the **execute-airflow.sh** script with the correct **service account key file path**.
+
+#### **1. Ensure the Service Account Key is in the Correct Location**
+Make sure the service account key JSON file is in:
+```bash
+~/heart-attack-prediction/service-account-key/
+```
+If needed, rename it to match the expected format:
+```bash
+mv ~/Downloads/<your-key-file>.json ~/heart-attack-prediction/service-account-key/heart-attack-dataset.json
+```
+
+#### **2. Update and Execute the Airflow Setup Script**
+Modify the `scripts/execute-airflow.sh` script to ensure it correctly sets up **Google Cloud authentication**:
+
+```bash
+#!/bin/bash
+set -e
+
+# Activate virtual environment
+source ~/heart-attack-prediction/venv/bin/activate
+
+# Set up GCP authentication
+export GOOGLE_APPLICATION_CREDENTIALS="~/heart-attack-prediction/service-account-key/<your-key-file>.json"
+export AIRFLOW_HOME=~/airflow
+```
+
+Run the script:
+```bash
+bash scripts/execute-airflow.sh
+```
 
 ---
 
 ### **7️⃣ Run dbt Transformations**
-Before running dbt, ensure that your `profiles.yml` file is properly configured:
+Ensure that your `profiles.yml` file is properly configured:
 1. Navigate to `~/.dbt/profiles.yml` and update the **service account key path**:
    ```yaml
    bigquery:
@@ -151,14 +173,26 @@ This will clean and transform the dataset in **BigQuery**.
 
 ---
 
-### **8️⃣ Power BI Visualization**
-🚨 **Important Note:** Power BI **cannot be automated in the free version**.  
-However, the **Power BI report (.pbix) file** is available in the `powerbi/` folder.
+### **8️⃣ Power BI Visualization**  
+🚨 **Important Note:** Power BI **cannot be fully automated in the free version**. However, you can manually open and interact with the report.  
 
-#### **To view the report:**
-1. Open **Power BI Desktop**.
-2. Connect to **BigQuery** using the **Google BigQuery Connector**.
-3. Load the transformed data and generate insights.
+The **Power BI report (.pbix) file** is available in the `powerbi/` folder. You can also view the generated pdf report with minimal formatting available in the folder.
+
+#### **To View the Report:**
+1️⃣ **Download and Install Power BI Desktop** (if not already installed)  
+   - [Download Power BI Desktop](https://powerbi.microsoft.com/en-us/desktop/)  
+   
+2️⃣ **Open the `.pbix` File**  
+   - Navigate to the `powerbi/` folder in your local project directory.  
+   - Double-click the `.pbix` file to open it in **Power BI Desktop**.  
+
+3️⃣ **Ensure Data Refresh is Enabled**  
+   - If prompted, sign in with a **Microsoft Account** to access cloud-based data.  
+   - Click **Transform Data → Data Source Settings** and update the **BigQuery credentials** if necessary.  
+   - Click **Refresh** in the toolbar to load the latest data from BigQuery.  
+
+4️⃣ **Explore the Visualizations**  
+   - Use the built-in charts, tables, and filters to analyze **heart attack risk factors and trends** in Indonesia.  
 
 ---
 
@@ -169,35 +203,11 @@ GitHub Actions is configured to automate:
 ✅ **dbt Transformations Execution**  
 🔜 **Power BI Report Updates (Future Scope)**  
 
-To enable automation, ensure that:
-- **Service account credentials** are stored in **GitHub Secrets**.
-- The GitHub Actions workflow files in `.github/workflows/` are properly configured.
-
 ---
 
 ## 📌 **Future Improvements**
 ✔️ Implement **Machine Learning models** for predictive analytics.  
 ✔️ Automate **Power BI dashboard deployment**.  
 ✔️ Expand dataset to include **more demographic insights**.  
-
----
-
-## 📄 **License**
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-
----
-
-## ✉️ **Contact**
-For any inquiries, feel free to reach out via **GitHub Issues** or email at **joshpola96@gmail.com**.
-
----
-
-### **✅ Final Notes**
-- The repository has been structured for **easy execution** with all automation scripts in `scripts/`.  
-- Ensure that the **service account key** is set up properly.  
-- If you face **authentication issues**, re-run the following:  
-  ```bash
-  export GOOGLE_APPLICATION_CREDENTIALS=~/heart-attack-prediction/service-account-key/<your-key-file>.json
-  ```
 
 ---
