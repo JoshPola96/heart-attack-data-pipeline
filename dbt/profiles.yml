@@ -1,0 +1,11 @@
+heart_attack:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: heart-attack-dataset
+      dataset: heart_attack_dataset
+      location: us-central1
+      threads: 1
+      keyfile: /home/josh/heart-attack-prediction/airflow/heart-attack-dataset-3b6b3d2bddb8.json
