@@ -1,8 +1,4 @@
-I'll update the README with the new workflow and script execution details. Here’s an improved version with **step-by-step instructions** for setting up configurations, authentication, and running the scripts.
-
----
-
-# **Heart Attack Prediction in Indonesia - Data Pipeline**
+# **Heart Attack Prediction in Indonesia - Data Engineering Zoomcamp - https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main**
 
 ## 📌 **Project Overview**
 This project builds an **end-to-end data pipeline** for analyzing heart attack prediction in Indonesia. Using **Google Cloud Platform (GCP)** and various **data engineering tools**, the pipeline automates data ingestion, transformation, and visualization to provide insights via **Power BI dashboards**.
