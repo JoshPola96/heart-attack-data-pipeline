@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: heart_attack_source
+    database: heart-attack-dataset
+    schema: heart_attack_dataset
+    tables:
+      - name: heart_attack_data

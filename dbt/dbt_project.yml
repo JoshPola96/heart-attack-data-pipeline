@@ -1,0 +1,19 @@
+name: 'heart_attack_dataset'
+version: '1.0.0'
+profile: 'heart_attack'
+model-paths: ["dbt_project/models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+clean-targets:
+  - "target"
+  - "dbt_packages"
+models:
+  heart_attack_dataset:
+    heart_attack:
+      cleaned_data:
+        +materialized: view
+      optimized_table:
+        +materialized: table

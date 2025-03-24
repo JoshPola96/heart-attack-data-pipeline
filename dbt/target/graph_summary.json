@@ -1,0 +1,1 @@
+{"_invocation_id": "355ff51a-c5d8-4979-8016-56004828f575", "linked": {"0": {"name": "source.heart_attack_dataset.heart_attack_source.heart_attack_data", "type": "source", "succ": [1]}, "1": {"name": "model.heart_attack_dataset.cleaned_data", "type": "model", "succ": [2]}, "2": {"name": "model.heart_attack_dataset.optimized_table", "type": "model"}}}

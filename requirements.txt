@@ -1,0 +1,26 @@
+# Core dependencies
+python-dotenv                 # For managing environment variables
+
+# Google Cloud Services
+google-cloud-storage          # Interacting with GCS
+google-cloud-bigquery         # Managing BigQuery datasets and queries
+google-auth                   # Authentication for GCP services
+google-auth-oauthlib          # OAuth handling for GCP
+
+# Terraform (For Infrastructure-as-Code)
+python-terraform              # Python wrapper for Terraform CLI
+
+# Apache Airflow (Cloud Composer)
+apache-airflow                # Core Airflow installation
+apache-airflow-providers-google  # Google Cloud support for Airflow
+apache-airflow-providers-http    # HTTP provider for external APIs
+
+# dbt (Data Build Tool) for transformations
+dbt-bigquery                  # dbt integration with BigQuery
+
+# Pandas & Data Processing
+pandas                        # Data manipulation
+numpy                         # Numerical operations
+
+# Other Utilities
+requests                      # Handling HTTP requests (for dataset downloading)
