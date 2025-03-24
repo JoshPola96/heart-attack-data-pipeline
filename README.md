@@ -68,7 +68,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-This will install all required dependencies, including **Apache Airflow, dbt, and Terraform modules**.
+**Please take care to install any additional dependancies as you work with the scripts, apolgoies for that**.
 
 ---
 
