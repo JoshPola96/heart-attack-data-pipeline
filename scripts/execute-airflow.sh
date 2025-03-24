@@ -2,14 +2,14 @@
 set -e
 
 # Set up GCP authentication
-export GOOGLE_APPLICATION_CREDENTIALS="/home/josh/heart-attack-prediction/airflow/heart-attack-dataset-3b6b3d2bddb8.json"
+export GOOGLE_APPLICATION_CREDENTIALS="/home/josh/heart-attack-prediction/service-account-key/heart-attack-dataset-35065960d254.json"
 export AIRFLOW_HOME=~/airflow
 
-# Configure Airflow connection for GCP
-airflow connections delete google_cloud_default || true
-airflow connections add google_cloud_default \
-  --conn-type google_cloud_platform \
-  --conn-extra "{\"project\": \"heart-attack-dataset\", \"keyfile_path\": \"$GOOGLE_APPLICATION_CREDENTIALS\"}"
+KEYFILE_PATH=$(echo $GOOGLE_APPLICATION_CREDENTIALS)
+airflow connections delete google_cloud_default
+airflow connections add 'google_cloud_default' \
+  --conn-type 'google_cloud_platform' \
+  --conn-extra "{\"project\": \"heart-attack-dataset\", \"keyfile_path\": \"$KEYFILE_PATH\"}"
 
 # Execute the DAG tasks directly
 cd ~/heart-attack-prediction/airflow/dags

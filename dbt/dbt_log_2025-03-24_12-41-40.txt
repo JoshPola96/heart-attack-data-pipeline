@@ -1,0 +1,39 @@
+[0m12:41:42  Running with dbt=1.9.3
+[0m12:41:43  Registered adapter: bigquery=1.9.1
+[0m12:41:43  Found 2 models, 1 source, 491 macros
+[0m12:41:43  
+[0m12:41:43  Concurrency: 1 threads (target='dev')
+[0m12:41:43  
+[0m12:41:47  Running with dbt=1.9.3
+[0m12:41:48  Registered adapter: bigquery=1.9.1
+[0m12:41:48  Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m12:41:49  Found 2 models, 1 source, 491 macros
+[0m12:41:49  
+[0m12:41:49  Concurrency: 1 threads (target='dev')
+[0m12:41:49  
+[0m12:41:51  1 of 2 START sql view model heart_attack_dataset.cleaned_data .................. [RUN]
+[0m12:41:53  1 of 2 OK created sql view model heart_attack_dataset.cleaned_data ............. [[32mCREATE VIEW (0 processed)[0m in 2.37s]
+[0m12:41:53  2 of 2 START sql table model heart_attack_dataset.optimized_table .............. [RUN]
+[0m12:41:59  2 of 2 OK created sql table model heart_attack_dataset.optimized_table ......... [[32mCREATE TABLE (158.4k rows, 33.3 MiB processed)[0m in 5.62s]
+[0m12:41:59  
+[0m12:41:59  Finished running 1 table model, 1 view model in 0 hours 0 minutes and 9.86 seconds (9.86s).
+[0m12:41:59  
+[0m12:41:59  [32mCompleted successfully[0m
+[0m12:41:59  
+[0m12:41:59  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m12:42:02  Running with dbt=1.9.3
+[0m12:42:03  Registered adapter: bigquery=1.9.1
+[0m12:42:03  Found 2 models, 1 source, 491 macros
+[0m12:42:03  
+[0m12:42:03  Concurrency: 1 threads (target='dev')
+[0m12:42:03  
+[0m12:42:05  1 of 2 START sql view model heart_attack_dataset.cleaned_data .................. [RUN]
+[0m12:42:07  1 of 2 OK created sql view model heart_attack_dataset.cleaned_data ............. [[32mCREATE VIEW (0 processed)[0m in 2.29s]
+[0m12:42:07  2 of 2 START sql table model heart_attack_dataset.optimized_table .............. [RUN]
+[0m12:42:13  2 of 2 OK created sql table model heart_attack_dataset.optimized_table ......... [[32mCREATE TABLE (158.4k rows, 33.3 MiB processed)[0m in 5.98s]
+[0m12:42:13  
+[0m12:42:13  Finished running 1 table model, 1 view model in 0 hours 0 minutes and 10.21 seconds (10.21s).
+[0m12:42:13  
+[0m12:42:13  [32mCompleted successfully[0m
+[0m12:42:13  
+[0m12:42:13  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
