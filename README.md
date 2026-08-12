@@ -4,6 +4,17 @@
 >
 > **Committed on purpose:** sample data under `data/` is included so the pipeline runs end to end without external credentials. It inflates the clone size; that is a deliberate trade for reproducibility.
 
+> [!NOTE]
+> **Built 2025. CI is currently red, for a known and diagnosed reason.**
+> `scripts/download-dataset.sh` writes to `$HOME/heart-attack-prediction/data`
+> without creating it first. On the machine it was written on that directory
+> already existed; on a clean CI runner it does not, so `curl` exits 23
+> (`Failure writing output to destination`). The dataset URL itself resolves
+> fine — a single `mkdir -p` fixes it.
+>
+> Logged here rather than hidden, and queued for a proper fix alongside pinning
+> the currently-unpinned dependencies.
+
 ## 📌 **Project Overview**
 This project builds an **end-to-end data pipeline** for analyzing heart attack prediction in Indonesia. Using **Google Cloud Platform (GCP)** and various **data engineering tools**, the pipeline automates data ingestion, transformation, and visualization to provide insights via **Power BI dashboards**.
 
