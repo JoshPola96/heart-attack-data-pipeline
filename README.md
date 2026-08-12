@@ -1,5 +1,9 @@
 # **Heart Attack Prediction in Indonesia - Data Engineering Zoomcamp - [GitHub](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main)**
 
+> **Scope** · Capstone for the [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) (DataTalksClub) — peer-reviewed against a published rubric. [Certificate](https://certificate.datatalks.club/dezoomcamp/2025/c8e8b5ba3fbcfde9632b6c623269ae4bbde4a2d2.pdf)
+>
+> **Committed on purpose:** sample data under `data/` is included so the pipeline runs end to end without external credentials. It inflates the clone size; that is a deliberate trade for reproducibility.
+
 ## 📌 **Project Overview**
 This project builds an **end-to-end data pipeline** for analyzing heart attack prediction in Indonesia. Using **Google Cloud Platform (GCP)** and various **data engineering tools**, the pipeline automates data ingestion, transformation, and visualization to provide insights via **Power BI dashboards**.
 
