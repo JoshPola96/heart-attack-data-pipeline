@@ -1,3 +1,4 @@
+# .gitignore
 # Ignore virtual environments
 venv/
 .env
@@ -27,3 +28,11 @@ build/
 
 # Ignore keys
 heart-attack-dataset-35065960d254.json
+.pytest_cache/
+.ipynb_checkpoints/
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+target/
+dbt_packages/
